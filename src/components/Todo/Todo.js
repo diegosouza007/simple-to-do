@@ -8,17 +8,25 @@ function Todo() {
     
     const [tasks, setTasks] = useState([]);
 
+    useEffect(()=> {
+        if (tasks.length > 0) {
+            document.title = `${tasks.length} tasks - Simple To Do`;
+        }
+    }, [tasks]);
+
     function onAddItem(text) {
 
         let task = new Task(text);
         setTasks([...tasks, task]);
     }
-    
+
     return (
         <main className="main">
-            <h1>My tasks</h1>
-            <ListForm onAddItem={onAddItem}/>
-            <List tasks={tasks} />
+            <div className="content">
+                <h1>My tasks</h1>
+                <ListForm onAddItem={onAddItem}/>
+                <List tasks={tasks} />
+            </div>
         </main>
     )
 }

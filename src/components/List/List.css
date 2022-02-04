@@ -1,0 +1,17 @@
+.taskList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  list-style: none;
+  border: 1px solid black;
+  padding: .8rem 2rem;
+  margin-top: .4rem;
+}
+/*# sourceMappingURL=List.css.map */
