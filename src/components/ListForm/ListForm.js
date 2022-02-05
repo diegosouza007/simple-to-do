@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './ListForm.css';
 
 function ListForm(props) {
 
@@ -13,13 +14,14 @@ function ListForm(props) {
         event.preventDefault();
         if(text.trim()) {
             props.onAddItem(text);
+            setText('');
         }
     }
 
     return (
-        <form>
-            <input onChange={handleText}></input>
-            <button onClick={createNewTask}>+</button>
+        <form className="tasksForm">
+            <input onChange={handleText} value={text}></input>
+            <button onClick={createNewTask} title="Add task">+</button>
         </form>
     );
 }

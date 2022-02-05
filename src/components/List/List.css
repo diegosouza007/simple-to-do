@@ -10,8 +10,35 @@
           align-items: center;
   color: white;
   list-style: none;
-  border: 1px solid black;
-  padding: .8rem 2rem;
+  padding: .8rem .5rem .8rem 2rem;
   margin-top: .4rem;
+  background: #2b2d42;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+}
+
+.taskList .done {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  margin-right: .2rem;
+}
+
+.taskList .delete {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.taskList .listBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=List.css.map */

@@ -5,7 +5,13 @@ function List(props) {
 
     return (
         <ul>
-            {props.tasks.map(task => <li className="taskList" key={task.id}>{task.text}<button>x</button></li>)}
+            {props.tasks.map(task => <li className="taskList" key={task.id}>
+                {task.text}
+                <div className="listBtn">
+                    <img className="done" src="./images/undone.png" />
+                    <img className="delete" src="./images/trash-task.png" title="Remove task" />
+                </div>
+            </li>)}
         </ul>
     );
 }

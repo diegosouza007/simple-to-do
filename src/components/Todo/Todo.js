@@ -27,6 +27,12 @@ function Todo() {
                 <ListForm onAddItem={onAddItem}/>
                 <List tasks={tasks} />
             </div>
+            <div className="trash">
+                <img  src="./images/trash-bin.png"/>
+                <span className={tasks.length === 0 ? "hide" : ""}>
+                    {tasks.length > 0 && tasks.length}
+                </span>
+            </div>
         </main>
     )
 }
