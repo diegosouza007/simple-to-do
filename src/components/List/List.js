@@ -5,10 +5,10 @@ function List(props) {
     return (
         <ul>
             {props.tasks.map(task => <li className="taskList" key={task.id}>
-                {task.text}
-                <div className="listBtn">
-                    <img className="done" src="./images/undone.png" />
-                    <img onClick={() => {props.onDeleteItem(task)}} className="delete" src="./images/trash-task.png" title="Remove task" />
+                <img className="done" src="./images/undone.png" />
+                <div className="listContent">
+                    {task.text}
+                    <img onClick={() => {props.onDeleteItem(task)}} className="delete" src="./images/trash-task.png" title="Delete task" />
                 </div>
             </li>)}
         </ul>

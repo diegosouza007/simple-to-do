@@ -21,24 +21,27 @@
   height: 2rem;
   width: 2rem;
   cursor: pointer;
-  margin-right: .2rem;
+  margin-left: -1rem;
+  margin-right: .8rem;
 }
 
 .taskList .delete {
   height: 2rem;
   width: 2rem;
   cursor: pointer;
+  margin-right: .4rem;
 }
 
-.taskList .listBtn {
+.taskList .listContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 /*# sourceMappingURL=List.css.map */

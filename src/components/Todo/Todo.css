@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   font-size: 62,5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .main {
@@ -12,9 +14,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -23,7 +25,8 @@
   height: 100vh;
   background: white;
   color: #2b2d42;
-  min-width: 295px;
+  min-width: 345px;
+  gap: 4.6rem;
 }
 
 .main .content {

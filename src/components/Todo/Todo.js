@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import List from "../List/List";
 import ListForm from "../ListForm/ListForm";
 import Trash from '../Trash/Trash';
+import Header from '../Header/Header';
 import Task from './Task';
 import './Todo.css';
 
 function Todo() {
     
     const [tasks, setTasks] = useState([]);
+    const [theme, setTheme] = useState(false);
 
     useEffect(()=> {
         if (tasks.length > 0) {
@@ -32,6 +34,7 @@ function Todo() {
         if (tasks.length > 0) {
             let option = window.confirm("Are you sure you want to delete all your tasks?");
             if(option) {
+                document.title = `Simple To Do`;
                 setTasks([]);
             }
         }
@@ -39,6 +42,7 @@ function Todo() {
 
     return (
         <main className="main">
+            <Header />
             <div className="content">
                 <h1>My tasks</h1>
                 <ListForm onAddItem={onAddItem}/>
