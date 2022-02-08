@@ -18,7 +18,6 @@ function Todo() {
     }, [tasks]);
 
     function onAddItem(text) {
-
         let task = new Task(text);
         setTasks([...tasks, task]);
     }
@@ -40,13 +39,23 @@ function Todo() {
         }
     }
 
+    function onHandleDone(item) {
+        let updatedItems = tasks.map(task => {
+            if (item.id === task.id){
+                task.done = !task.done;
+            };
+            return task;
+        });
+        setTasks(updatedItems);
+    }
+
     return (
         <main className="main">
             <Header />
             <div className="content">
                 <h1>My tasks</h1>
                 <ListForm onAddItem={onAddItem}/>
-                <List tasks={tasks} onDeleteItem={onDeleteItem} />
+                <List tasks={tasks} onDeleteItem={onDeleteItem} onHandleDone={onHandleDone}/>
             </div>
             <Trash tasks={tasks} onDeleteAllTasks={onDeleteAllTasks}/>
         </main>

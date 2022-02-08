@@ -3,21 +3,18 @@
     padding: 0;
     font-size: 62,5%;
     box-sizing: border-box;
-
-    $first-color: white;
-    $second-color: #2b2d42;
 }
 
 .main {
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: center;
     font-family: 'Josefin Sans', sans-serif;
     width: 100vw;
     height: 100vh;
-    background: var($first-color);
-    color: var($second-color);
+    background: white;
+    color: #2b2d42;
     min-width: 345px;
     gap: 4.6rem;
 
