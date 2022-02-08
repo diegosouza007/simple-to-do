@@ -62,4 +62,8 @@
           align-items: center;
   width: 100%;
 }
+
+.taskList.dark {
+  border: .1rem solid white;
+}
 /*# sourceMappingURL=List.css.map */

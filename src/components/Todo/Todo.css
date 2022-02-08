@@ -27,6 +27,8 @@
   color: #2b2d42;
   min-width: 345px;
   gap: 4.6rem;
+  -webkit-transition: background 1s;
+  transition: background 1s;
 }
 
 .main .content {
@@ -37,5 +39,10 @@
 .main .content h1 {
   text-align: center;
   margin-bottom: .8rem;
+}
+
+.dark {
+  background: #2b2d42;
+  color: white;
 }
 /*# sourceMappingURL=Todo.css.map */

@@ -49,13 +49,17 @@ function Todo() {
         setTasks(updatedItems);
     }
 
+    function onHandleTheme() {
+        setTheme(!theme);
+    }
+
     return (
-        <main className="main">
-            <Header />
+        <main className={theme ? "main dark" : "main"}>
+            <Header theme={theme} onHandleTheme={onHandleTheme}/>
             <div className="content">
                 <h1>My tasks</h1>
-                <ListForm onAddItem={onAddItem}/>
-                <List tasks={tasks} onDeleteItem={onDeleteItem} onHandleDone={onHandleDone}/>
+                <ListForm theme={theme} onAddItem={onAddItem}/>
+                <List theme={theme} tasks={tasks} onDeleteItem={onDeleteItem} onHandleDone={onHandleDone}/>
             </div>
             <Trash tasks={tasks} onDeleteAllTasks={onDeleteAllTasks}/>
         </main>

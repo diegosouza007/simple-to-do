@@ -14,6 +14,8 @@
 }
 
 .tasksForm input {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2rem;
   color: #2b2d42;
   width: calc(100% - 70px);
   margin-left: 10px;
@@ -41,5 +43,10 @@
 .tasksForm button:hover {
   -webkit-filter: brightness(1.4);
           filter: brightness(1.4);
+}
+
+.tasksForm .dark {
+  color: #2b2d42;
+  background: white;
 }
 /*# sourceMappingURL=ListForm.css.map */

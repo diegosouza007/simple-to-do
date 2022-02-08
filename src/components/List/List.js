@@ -5,7 +5,7 @@ import './List.css';
 function List(props) {
     return (
         <ul>
-            {props.tasks.map(task => <li className="taskList" key={task.id}>
+            {props.tasks.map(task => <li className={props.theme? "taskList dark" : "taskList"} key={task.id}>
                 <button onClick={() => {props.onHandleDone(task)}}>
                     <DoneImg done={task.done}/>
                 </button>

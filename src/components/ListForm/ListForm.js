@@ -21,7 +21,7 @@ function ListForm(props) {
     return (
         <form className="tasksForm">
             <input onChange={handleText} value={text}></input>
-            <button onClick={createNewTask} title="Add task">+</button>
+            <button className={props.theme ? "dark" : ""} onClick={createNewTask} title="Add task">+</button>
         </form>
     );
 }

@@ -17,6 +17,7 @@
     color: #2b2d42;
     min-width: 345px;
     gap: 4.6rem;
+    transition: background 1s;
 
     .content {
         width: calc(100% - 50px);
@@ -26,4 +27,10 @@
             margin-bottom: .8rem;
         }
     }
+
+}
+
+.dark {
+    background: #2b2d42;
+    color: white;
 }
