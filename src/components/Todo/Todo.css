@@ -35,30 +35,4 @@
   text-align: center;
   margin-bottom: .8rem;
 }
-
-.main .trash {
-  position: relative;
-  position: fixed;
-  bottom: 1.3rem;
-  right: 1.3rem;
-  cursor: pointer;
-}
-
-.main .trash span {
-  display: block;
-  text-align: center;
-  color: white;
-  position: absolute;
-  height: 1rem;
-  width: 1rem;
-  padding: .4rem;
-  border-radius: 50%;
-  background: #e76f51;
-  bottom: 0;
-  right: 0;
-}
-
-.main .trash span.hide {
-  display: none;
-}
 /*# sourceMappingURL=Todo.css.map */
