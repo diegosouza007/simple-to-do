@@ -15,7 +15,7 @@ In this project and in another new future I'll build using ReactJS.
 
 # Install
 
-Run the following commands os seguintes comandos em um terminal:
+Run the following commands in your terminal:
 
 ```
 git clone https://github.com/diegosouza007/simple-to-do.git
