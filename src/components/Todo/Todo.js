@@ -3,6 +3,7 @@ import List from "../List/List";
 import ListForm from "../ListForm/ListForm";
 import Trash from '../Trash/Trash';
 import Header from '../Header/Header';
+import Modal from '../Modal/Modal';
 import Task from './Task';
 import './Todo.css';
 
@@ -10,6 +11,7 @@ function Todo() {
     
     const [tasks, setTasks] = useState([]);
     const [theme, setTheme] = useState(false);
+    const [modal, setModal] = useState(false);
 
     useEffect(()=>{
         setTasks(JSON.parse(localStorage.getItem('@todolist:items')));
@@ -39,11 +41,9 @@ function Todo() {
 
     function onDeleteAllTasks() {
         if (tasks.length > 0) {
-            let option = window.confirm("Are you sure you want to delete all your tasks?");
-            if(option) {
-                document.title = `Simple To Do`;
-                setTasks([]);
-            }
+            document.title = `Simple To Do`;
+            setTasks([]);
+            setModal(false);
         }
     }
 
@@ -61,6 +61,10 @@ function Todo() {
         setTheme(!theme);
     }
 
+    function toggleModal(){
+        setModal(!modal);
+    }
+
     return (
         <main className={theme ? "main dark" : "main"}>
             <Header theme={theme} onHandleTheme={onHandleTheme}/>
@@ -69,7 +73,8 @@ function Todo() {
                 <ListForm theme={theme} onAddItem={onAddItem}/>
                 <List theme={theme} tasks={tasks} onDeleteItem={onDeleteItem} onHandleDone={onHandleDone}/>
             </div>
-            <Trash tasks={tasks} onDeleteAllTasks={onDeleteAllTasks}/>
+            <Modal tasks={tasks} modal={modal} onDeleteAllTasks={onDeleteAllTasks} toggleModal={toggleModal}/>
+            <Trash tasks={tasks} toggleModal={toggleModal}/>
         </main>
     );
 }
