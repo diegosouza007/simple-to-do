@@ -38,5 +38,7 @@ npm start
 <img src="./public/images/preview-1.png">
 <img src="./public/images/preview-2.png">
 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/11907759/153303448-3962647f-c64f-4522-9df1-2b253d06b72c.gif)
+
 Preview link: <a href="https://simple-to-do-five.vercel.app/">https://simple-to-do-five.vercel.app/</a>
 
