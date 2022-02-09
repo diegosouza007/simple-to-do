@@ -11,8 +11,8 @@ function List(props) {
                 </button>
                 <div className={task.done ? "listContent done" : "listContent"}>
                     {task.text}
-                    <img onClick={() => {props.onDeleteItem(task)}} className="delete" src="./images/trash-task.png" title="Delete task" />
                 </div>
+                <img onClick={() => {props.onDeleteItem(task)}} className="delete" src="./images/trash-task.png" title="Delete task" />
             </li>)}
         </ul>
     );
