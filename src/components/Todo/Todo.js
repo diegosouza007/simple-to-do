@@ -11,6 +11,14 @@ function Todo() {
     const [tasks, setTasks] = useState([]);
     const [theme, setTheme] = useState(false);
 
+    useEffect(()=>{
+        setTasks(JSON.parse(localStorage.getItem('@todolist:items')));
+    },[]);
+
+    useEffect(()=>{
+        localStorage.setItem('@todolist:items', JSON.stringify(tasks));
+    },[tasks]);
+
     useEffect(()=> {
         if (tasks.length > 0) {
             document.title = `${tasks.length} tasks - Simple To Do`;
