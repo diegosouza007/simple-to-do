@@ -14,7 +14,9 @@ function Todo() {
     const [modal, setModal] = useState(false);
 
     useEffect(()=>{
-        setTasks(JSON.parse(localStorage.getItem('@todolist:items')));
+        if(localStorage.getItem('@todolist:items')) {
+            setTasks(JSON.parse(localStorage.getItem('@todolist:items')));
+        }
     },[]);
 
     useEffect(()=>{
