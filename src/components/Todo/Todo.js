@@ -26,6 +26,8 @@ function Todo() {
     useEffect(()=> {
         if (tasks.length > 0) {
             document.title = `${tasks.length} tasks - Simple To Do`;
+        } else {
+            document.title = `Simple To Do`;
         }
     }, [tasks]);
 
@@ -43,7 +45,6 @@ function Todo() {
 
     function onDeleteAllTasks() {
         if (tasks.length > 0) {
-            document.title = `Simple To Do`;
             setTasks([]);
             setModal(false);
         }
