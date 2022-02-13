@@ -25,6 +25,10 @@ git clone https://github.com/diegosouza007/simple-to-do.git
 cd simple-to-do
 ```
 
+```
+npm install
+```
+
 # To run the project
 
 Use this command to run: 
