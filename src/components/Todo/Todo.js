@@ -11,17 +11,20 @@ function Todo() {
     
     const [tasks, setTasks] = useState([]);
     const [theme, setTheme] = useState(false);
+    const [theme2, setTheme2] = useState(false);
     const [modal, setModal] = useState(false);
 
     useEffect(()=>{
         if(localStorage.getItem('@todolist:items')) {
             setTasks(JSON.parse(localStorage.getItem('@todolist:items')));
         }
+        setTheme(JSON.parse(localStorage.getItem('@todolist:theme')));
     },[]);
 
     useEffect(()=>{
         localStorage.setItem('@todolist:items', JSON.stringify(tasks));
-    },[tasks]);
+        localStorage.setItem('@todolist:theme', JSON.stringify(theme));
+    },[tasks, theme]);
 
     useEffect(()=> {
         if (tasks.length > 0) {
